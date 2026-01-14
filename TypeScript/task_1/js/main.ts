@@ -64,3 +64,19 @@ const director1: Directors = {
 };
 
 console.log(director1);
+
+// ========================================
+// TASK 3: printTeacher Function
+// ========================================
+
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+    return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+// Example of use (Task 3)
+console.log(printTeacher('John', 'Doe'));  // Output: J. Doe
+console.log(printTeacher('Jane', 'Smith'));  // Output: J. Smith
