@@ -49,11 +49,6 @@ function createEmployee(salary: number | string): Director | Teacher {
     return new Director();
 }
 
-// Example of use
-console.log(createEmployee(200));
-console.log(createEmployee(1000));
-console.log(createEmployee('$500'));
-
 // ========================================
 // TASK 6: Creating functions specific to employees
 // ========================================
@@ -70,6 +65,12 @@ function executeWork(employee: Director | Teacher): string {
     }
 }
 
-// Example of use
-console.log(executeWork(createEmployee(200)));   // Getting to work
-console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
+// ========================================
+// TASK 7: String literal types
+// ========================================
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+    return `Teaching ${todayClass}`;
+}
